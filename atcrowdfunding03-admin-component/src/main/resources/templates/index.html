@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript" th:src="@{/jquery/jquery-2.1.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/jquery/jquery-form.min.js}"></script>
+<script type="text/javascript" th:src="@{/layer/layer.js}"></script>
+
+
+<script type="text/javascript">
+
+    $(function (){
+        $("#btn1").click(function (){
+            var array = [1,2,3];
+            var arrayJson = JSON.stringify(array);
+            $.ajax({
+                url: "send.ajax.html",
+                type: "post",
+                contentType: "application/json;charset=utf-8",
+                dataType: "text",
+                data: arrayJson,
+                success: function(response){
+                    alert(response)
+                },
+                error: function (response){
+                    alert(response)
+                }
+            })
+        });
+
+        $("#btn5").click(function (){
+            layer.msg("111");
+        })
+    });
+
+</script>
+<body>
+<h1>SSM</h1>
+<a th:href="@{/send.exception.html}">异常</a><br><br>
+<button id="btn1">点我发送ajax请求和处理异常</button><br><br>
+
+<button id="btn5">引入layer.js</button>
+</body>
+</html>

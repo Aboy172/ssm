@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CheckStyle-IDEA">
+    <option name="configuration">
+      <map>
+        <entry key="checkstyle-version" value="9.3" />
+        <entry key="copy-libs" value="true" />
+        <entry key="location-0" value="BUNDLED:(bundled):Sun Checks" />
+        <entry key="location-1" value="BUNDLED:(bundled):Google Checks" />
+        <entry key="scan-before-checkin" value="false" />
+        <entry key="scanscope" value="JavaOnly" />
+        <entry key="suppress-errors" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/atcrowdfunding02-admin-webui" />
+    <file type="web" url="file://$PROJECT_DIR$/pro01-spring-security" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/atcrowdfunding02-admin-webui/pom.xml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding05-common-util/pom.xml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding01-admin-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding04-admin-entity/pom.xml" />
+        <option value="$PROJECT_DIR$/demo/atcrowdfunding03-admin-component/pom.xml" />
+        <option value="$PROJECT_DIR$/atcrowdfunding03-admin-component/pom.xml" />
+        <option value="$PROJECT_DIR$/demo01-spring-security/pom.xml" />
+        <option value="$PROJECT_DIR$/pro01-spring-security/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/pro01-spring-security/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="SwUserDefinedSpecifications">
+    <option name="specTypeByUrl">
+      <map />
+    </option>
+  </component>
+</project>

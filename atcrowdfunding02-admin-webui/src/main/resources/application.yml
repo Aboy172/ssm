@@ -1,0 +1,50 @@
+#spring:
+#  web:
+#    resources:
+#      add-mappings: true
+##      static-locations: classpath:/static/
+#  # 配置数据源信息
+#  datasource:
+#    # 配置数据源类型
+#    type: com.zaxxer.hikari.HikariDataSource
+#    #配置连接数据库信息
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/project_crowd?serverTimezone=GMT%2B8&characterEncoding=utf-8&useSSL=false
+#    username: root
+#    password: root
+#  #配置thymeleaf引擎
+#  thymeleaf:
+#    cache: false
+#    prefix: classpath:/templates/
+#    suffix: .html
+#  #文件上传解析器
+#  servlet:
+#    multipart:
+#      enabled: true
+#  #将post请求转换为put或delete请求,res风格
+#  mvc:
+#    hiddenmethod:
+#      filter:
+#        enabled: true
+## 解决中文乱码
+#server:
+#  servlet:
+#    encoding:
+#      charset: UTF-8
+#      enabled: true
+#      force: true
+## 配置mybatis-plus
+#mybatis-plus:
+#  configuration:
+#    #输出sql语句
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  # 全局配置
+#  #global-config:
+#    #db-config:
+#      # 省略表名前缀
+#      #table-prefix: t_
+#      #全局主键自增策略
+#      #id-type: auto
+##  type-aliases-package: com.cym.mybatisplus.pojo
+##  type-enums-package: com.cym.mybatisplus.enums
+#
