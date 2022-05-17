@@ -1,0 +1,5 @@
+com\cym\atcrowdfunding04adminentity\CrowdfundingAdminEntityApplication.class
+com\cym\atcrowdfunding04adminentity\entity\Address.class
+com\cym\atcrowdfunding04adminentity\entity\School.class
+com\cym\atcrowdfunding04adminentity\entity\Student.class
+com\cym\atcrowdfunding04adminentity\entity\Subject.class

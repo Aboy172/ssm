@@ -7,10 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="atcrowdfunding02-admin-webui" />
-        <module name="atcrowdfunding05-common-util" />
-        <module name="atcrowdfunding04-admin-entity" />
-        <module name="atcrowdfunding03-admin-component" />
+        <module name="pro01-spring-security" />
+        <module name="atcrowdfunding-admin-webui" />
+        <module name="crowdfunding-admin-component" />
+        <module name="crowdfunding-admin-entity" />
+        <module name="crowdfunding-common-util" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,18 +22,22 @@
       <module name="atcrowdfunding05-common-util" target="1.8" />
       <module name="atcrowdfunding06-common-utils" target="1.8" />
       <module name="pri" target="1.8" />
-      <module name="pro01-spring-security" target="1.8" />
+      <module name="pro01-spring-boot-auto-project" target="1.8" />
       <module name="pro05-spring-security" target="1.8" />
       <module name="springboot-maven-project" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="atcrowdfunding-admin-webui" options="-parameters" />
       <module name="atcrowdfunding02-admin-webui" options="-parameters" />
       <module name="atcrowdfunding03-admin-component" options="-parameters" />
       <module name="atcrowdfunding04-admin-entity" options="-parameters" />
       <module name="atcrowdfunding05-common-util" options="-parameters" />
       <module name="atcrowdfunding06-common-utils" options="-parameters" />
+      <module name="crowdfunding-admin-component" options="-parameters" />
+      <module name="crowdfunding-admin-entity" options="-parameters" />
+      <module name="crowdfunding-common-util" options="-parameters" />
       <module name="pro01-spring-security" options="" />
     </option>
   </component>

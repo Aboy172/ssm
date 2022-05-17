@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="atcrowdfunding02-admin-webui:war exploded">
-    <output-path>$PROJECT_DIR$/atcrowdfunding02-admin-webui/target/atcrowdfunding02-admin-webui-1.0.0</output-path>
+    <output-path>$PROJECT_DIR$/crowdfunding-admin-parent/crowdfunding-admin-webui/target/atcrowdfunding-admin-webui-1.0.0</output-path>
     <properties id="maven-jee-properties">
       <options>
         <exploded>true</exploded>
@@ -14,11 +14,11 @@
           <element id="module-output" name="atcrowdfunding02-admin-webui" />
         </element>
         <element id="directory" name="lib">
-          <element id="archive" name="atcrowdfunding03-admin-component-1.0.0.jar">
-            <element id="module-output" name="atcrowdfunding03-admin-component" />
+          <element id="archive" name="crowdfunding-admin-component-1.0.0.jar">
+            <element id="module-output" name="crowdfunding-admin-component" />
           </element>
-          <element id="archive" name="atcrowdfunding04-admin-entity-1.0.0.jar">
-            <element id="module-output" name="atcrowdfunding04-admin-entity" />
+          <element id="archive" name="crowdfunding-admin-entity-1.0.0.jar">
+            <element id="module-output" name="crowdfunding-admin-entity" />
           </element>
           <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.75" />
           <element id="library" level="project" name="Maven: org.thymeleaf.extras:thymeleaf-extras-springsecurity5:3.0.4.RELEASE" />
@@ -30,8 +30,8 @@
           <element id="library" level="project" name="Maven: org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-aop:2.6.3" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.9.7" />
-          <element id="archive" name="atcrowdfunding05-common-util-1.0.0.jar">
-            <element id="module-output" name="atcrowdfunding05-common-util" />
+          <element id="archive" name="crowdfunding-common-util-1.0.0.jar">
+            <element id="module-output" name="crowdfunding-common-util" />
           </element>
           <element id="library" level="project" name="Maven: com.baomidou:mybatis-plus-boot-starter:3.5.1" />
           <element id="library" level="project" name="Maven: com.baomidou:mybatis-plus:3.5.1" />
@@ -86,7 +86,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/atcrowdfunding02-admin-webui/target/atcrowdfunding02-admin-webui-1.0.0/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/crowdfunding-admin-parent/crowdfunding-admin-webui/target/atcrowdfunding-admin-webui-1.0.0/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="atcrowdfunding02-admin-webui/web/Web" />
     </root>

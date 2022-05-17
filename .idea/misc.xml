@@ -13,8 +13,11 @@
       </map>
     </option>
   </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/atcrowdfunding02-admin-webui" />
+    <file type="web" url="file://$PROJECT_DIR$/crowdfunding-admin-parent/crowdfunding-admin-webui" />
+    <file type="web" url="file://$PROJECT_DIR$/crowdfunding01-admin-parent/atcrowdfunding02-admin-webui" />
     <file type="web" url="file://$PROJECT_DIR$/pro01-spring-security" />
   </component>
   <component name="MavenProjectsManager">
@@ -28,12 +31,8 @@
         <option value="$PROJECT_DIR$/atcrowdfunding03-admin-component/pom.xml" />
         <option value="$PROJECT_DIR$/demo01-spring-security/pom.xml" />
         <option value="$PROJECT_DIR$/pro01-spring-security/pom.xml" />
+        <option value="$PROJECT_DIR$/crowdfunding-admin-parent/pom.xml" />
       </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/pro01-spring-security/pom.xml" />
-      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />

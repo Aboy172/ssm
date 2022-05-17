@@ -1,0 +1,61 @@
+<!DOCTYPE html >
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+
+<head th:replace="include-head :: header-fragment"></head>
+<body>
+<nav th:replace="include-nav :: nav-fragment"></nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div th:replace="include-sidebar :: sidebar-fragment"></div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h1 class="page-header">控制面板</h1>
+
+            <!--登录账号:<span sec:authentication="principal.originalAdmin.userName"></span><br/>-->
+            <!--类:<span sec:authentication="principal.class.name"></span><br/>-->
+            <!--被擦除掉了无法显示-->
+            <!--登录密码:<span sec:authentication="principal.password"></span><br/>-->
+            <!--凭证：<span sec:authentication="credentials"></span><br/>-->
+            <!--权限和角色：<span sec:authentication="authorities"></span><br/>-->
+
+            <div class="row placeholders">
+                <sapn sec:authorize="hasRole('老板')">
+                    <div class="col-xs-6 col-sm-3 placeholder">
+                        <img data-src="holder.js/200x200/auto/sky" class="img-responsive"
+                             alt="Generic placeholder thumbnail">
+                        <h4>Label</h4>
+                        <span class="text-muted">Something else</span>
+                    </div>
+                </sapn>
+                <sapn sec:authorize="hasRole('老板')">
+                    <div class="col-xs-6 col-sm-3 placeholder">
+                        <img data-src="holder.js/200x200/auto/vine" class="img-responsive"
+                             alt="Generic placeholder thumbnail">
+                        <h4>Label</h4>
+                        <span class="text-muted">Something else</span>
+                    </div>
+                </sapn>
+                <sapn sec:authorize="hasRole('老板')">
+                    <div class="col-xs-6 col-sm-3 placeholder">
+                        <img data-src="holder.js/200x200/auto/sky" class="img-responsive"
+                             alt="Generic placeholder thumbnail">
+                        <h4>Label</h4>
+                        <span class="text-muted">Something else</span>
+                    </div>
+                </sapn>
+                <sapn sec:authorize="hasRole('老板')">
+                    <div class="col-xs-6 col-sm-3 placeholder">
+                        <img data-src="holder.js/200x200/auto/vine" class="img-responsive"
+                             alt="Generic placeholder thumbnail">
+                        <h4>Label</h4>
+                        <span class="text-muted">Something else</span>
+                    </div>
+                </sapn>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
