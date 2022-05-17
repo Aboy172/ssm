@@ -32,6 +32,8 @@
         <option value="$PROJECT_DIR$/demo01-spring-security/pom.xml" />
         <option value="$PROJECT_DIR$/pro01-spring-security/pom.xml" />
         <option value="$PROJECT_DIR$/crowdfunding-admin-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/corwdfunding-member-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/crowdfunding-member-parent/pom.xml" />
       </list>
     </option>
   </component>

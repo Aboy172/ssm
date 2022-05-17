@@ -9,14 +9,34 @@
     <file url="file://$PROJECT_DIR$/atcrowdfunding05-common-util/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding-admin-parent/crowdfunding-admin-component/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding-admin-parent/crowdfunding-admin-entity/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-admin-parent/crowdfunding-admin-entity/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding-admin-parent/crowdfunding-admin-webui/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-admin-parent/crowdfunding-admin-webui/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding-admin-parent/crowdfunding-common-util/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding-admin-parent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-admin-parent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-authentication-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-authentication-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-entity/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-entity/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-mysql-provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-mysql-provider/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-nacos/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-nacos/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-project-consumer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-project-consumer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-redis-provider/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-redis-provider/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding01-admin-parent/atcrowdfunding02-admin-webui/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding01-admin-parent/atcrowdfunding03-admin-component/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding01-admin-parent/atcrowdfunding04-admin-entity/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding01-admin-parent/atcrowdfunding05-common-util/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding01-admin-parent/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro01-spring-security/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro01-spring-security/src/main/resources" charset="UTF-8" />
+    <file url="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-parent/2.6.7/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
