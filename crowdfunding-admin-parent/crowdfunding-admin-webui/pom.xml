@@ -7,7 +7,7 @@
         <artifactId>crowdfunding-admin-parent</artifactId>
         <version>1.0.0</version>
     </parent>
-    <artifactId>atcrowdfunding-admin-webui</artifactId>
+    <artifactId>crowdfunding-admin-webui</artifactId>
     <version>1.0.0</version>
     <packaging>war</packaging>
     <name>crowdfunding-admin-webui</name>
