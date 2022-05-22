@@ -1,8 +1,5 @@
-D:\java\ssm\crowdfunding-admin-parent\crowdfunding-admin-component\src\main\java\com\cym\crowdfundingadmincomponent\pojo\Menu.java
-D:\java\ssm\crowdfunding-admin-parent\crowdfunding-admin-component\src\main\java\com\cym\crowdfundingadmincomponent\pojo\Role.java
 D:\java\ssm\crowdfunding-admin-parent\crowdfunding-admin-component\src\main\java\com\cym\crowdfundingadmincomponent\mapper\AuthMapper.java
 D:\java\ssm\crowdfunding-admin-parent\crowdfunding-admin-component\src\main\java\com\cym\crowdfundingadmincomponent\mapper\RoleMapper.java
-D:\java\ssm\crowdfunding-admin-parent\crowdfunding-admin-component\src\main\java\com\cym\crowdfundingadmincomponent\pojo\Auth.java
 D:\java\ssm\crowdfunding-admin-parent\crowdfunding-admin-component\src\main\java\com\cym\crowdfundingadmincomponent\config\TransactionAdviceConfig.java
 D:\java\ssm\crowdfunding-admin-parent\crowdfunding-admin-component\src\main\java\com\cym\crowdfundingadmincomponent\config\WebAppSecurityConfig.java
 D:\java\ssm\crowdfunding-admin-parent\crowdfunding-admin-component\src\main\java\com\cym\crowdfundingadmincomponent\handler\AdminHandler.java
@@ -28,7 +25,6 @@ D:\java\ssm\crowdfunding-admin-parent\crowdfunding-admin-component\src\main\java
 D:\java\ssm\crowdfunding-admin-parent\crowdfunding-admin-component\src\main\java\com\cym\crowdfundingadmincomponent\exception\AdminExitsAddException.java
 D:\java\ssm\crowdfunding-admin-parent\crowdfunding-admin-component\src\main\java\com\cym\crowdfundingadmincomponent\service\impl\AdminServiceImpl.java
 D:\java\ssm\crowdfunding-admin-parent\crowdfunding-admin-component\src\main\java\com\cym\crowdfundingadmincomponent\CrowdfundingAdminComponentApplication.java
-D:\java\ssm\crowdfunding-admin-parent\crowdfunding-admin-component\src\main\java\com\cym\crowdfundingadmincomponent\pojo\Admin.java
 D:\java\ssm\crowdfunding-admin-parent\crowdfunding-admin-component\src\main\java\com\cym\crowdfundingadmincomponent\service\impl\RoleServiceImpl.java
 D:\java\ssm\crowdfunding-admin-parent\crowdfunding-admin-component\src\main\java\com\cym\crowdfundingadmincomponent\mapper\MenuMapper.java
 D:\java\ssm\crowdfunding-admin-parent\crowdfunding-admin-component\src\main\java\com\cym\crowdfundingadmincomponent\service\impl\AuthServiceImpl.java

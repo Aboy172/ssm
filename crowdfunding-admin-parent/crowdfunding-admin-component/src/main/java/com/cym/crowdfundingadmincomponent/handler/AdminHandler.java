@@ -2,9 +2,10 @@ package com.cym.crowdfundingadmincomponent.handler;
 
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.cym.crowdfundingadmincomponent.pojo.Admin;
 import com.cym.crowdfundingadmincomponent.service.AdminService;
-import com.cym.crowdfundingcommonutil.utils.CrowdConstant;
+import com.cym.crowdfundingadminentity.entity.Student;
+import com.cym.crowdfundingadminentity.entity.pojo.Admin;
+import com.cym.crowdfundingcommonutil.constant.CrowdConstant;
 import com.cym.crowdfundingcommonutil.utils.CrowdUtils;
 import com.cym.crowdfundingcommonutil.vo.RespBean;
 import com.cym.crowdfundingcommonutil.vo.RespBeanEnum;
@@ -73,7 +74,7 @@ public class AdminHandler {
   @PostMapping("/save/student")
   @ResponseBody
   public RespBean test(
-      @RequestBody com.cym.atcrowdfunding04adminentity.entity.Student student) {
+      @RequestBody Student student) {
     if (student == null) {
       return RespBean.error(
           RespBeanEnum.NULL_ENTITY, student);

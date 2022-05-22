@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cym.crowd.mapper.MemberMapper">
+
+  <resultMap id="BaseResultMap" type="com.cym.crowd.entity.po.Member">
+    <id property="id" column="id" jdbcType="INTEGER"/>
+    <result property="loginacct" column="loginacct" jdbcType="VARCHAR"/>
+    <result property="userpswd" column="userpswd" jdbcType="CHAR"/>
+    <result property="username" column="username" jdbcType="VARCHAR"/>
+    <result property="email" column="email" jdbcType="VARCHAR"/>
+    <result property="authstatus" column="authstatus" jdbcType="INTEGER"/>
+    <result property="usertype" column="usertype" jdbcType="INTEGER"/>
+    <result property="realname" column="realname" jdbcType="VARCHAR"/>
+    <result property="cardnum" column="cardnum" jdbcType="VARCHAR"/>
+    <result property="accttype" column="accttype" jdbcType="INTEGER"/>
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id,loginacct,userpswd,
+    username,email,authstatus,
+    usertype,realname,cardnum,
+    accttype
+  </sql>
+  <insert id="insertSelective">
+    insert into t_member
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">id,</if>
+      <if test="loginacct != null">loginacct,</if>
+      <if test="userpswd != null">userpswd,</if>
+      <if test="username != null">username,</if>
+      <if test="email != null">email,</if>
+      <if test="authstatus != null">authstatus,</if>
+      <if test="usertype != null">usertype,</if>
+      <if test="realname != null">realname,</if>
+      <if test="cardnum != null">cardnum,</if>
+      <if test="accttype != null">accttype,</if>
+    </trim>
+    values
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">#{id,jdbcType=INTEGER},</if>
+      <if test="loginacct != null">#{loginacct,jdbcType=VARCHAR},</if>
+      <if test="userpswd != null">#{userpswd,jdbcType=CHAR},</if>
+      <if test="username != null">#{username,jdbcType=VARCHAR},</if>
+      <if test="email != null">#{email,jdbcType=VARCHAR},</if>
+      <if test="authstatus != null">#{authstatus,jdbcType=INTEGER},</if>
+      <if test="usertype != null">#{usertype,jdbcType=INTEGER},</if>
+      <if test="realname != null">#{realname,jdbcType=VARCHAR},</if>
+      <if test="cardnum != null">#{cardnum,jdbcType=VARCHAR},</if>
+      <if test="accttype != null">#{accttype,jdbcType=INTEGER},</if>
+    </trim>
+  </insert>
+  <select id="selectByLoginacct" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from t_member
+    where
+    loginacct = #{loginacct,jdbcType=VARCHAR}
+  </select>
+
+</mapper>

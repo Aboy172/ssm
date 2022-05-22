@@ -8,12 +8,12 @@
  */
 package com.cym.crowdfundingcommonutil.vo;
 
+import java.lang.reflect.Type;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
-
-import java.util.Arrays;
 
 /**
  * @author 86152
@@ -22,18 +22,22 @@ import java.util.Arrays;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Slf4j
-public class RespBean {
+@ToString
+public class RespBean<T> {
 
 
     private long code;
     private String message;
-    private  Object obj;
+    private  T obj;
 
-    public RespBean (Object obj) {
-        this.obj = obj;
+    public RespBean(long code, String message) {
+        this.code = code;
+        this.message = message;
     }
 
+    public RespBean(String message) {
+        this.message = message;
+    }
 
     /**
      * 默认成功的返回结果
@@ -41,7 +45,7 @@ public class RespBean {
      * @return
      */
     public static RespBean success() {
-        return new RespBean(RespBeanEnum.SUCCESS.getCode(), RespBeanEnum.SUCCESS.getMessage(), null);
+        return new RespBean<>(RespBeanEnum.SUCCESS.getCode(), RespBeanEnum.SUCCESS.getMessage(), null);
     }
 
     /**
@@ -50,8 +54,8 @@ public class RespBean {
      * @param obj
      * @return
      */
-    public static  RespBean success(Object obj) {
-        return new RespBean(RespBeanEnum.SUCCESS.getCode(), RespBean.success().getMessage(), obj);
+    public static <T> RespBean<T> success(T obj) {
+        return new RespBean<>(RespBeanEnum.SUCCESS.getCode(), RespBean.success().getMessage(), obj);
     }
 
     /**
@@ -64,8 +68,8 @@ public class RespBean {
      * @param respBeanEnum
      * @return
      */
-    public static RespBean error(RespBeanEnum respBeanEnum) {
-        return new RespBean(respBeanEnum.getCode(), respBeanEnum.getMessage(), null);
+    public  static <T> RespBean<T> error(RespBeanEnum respBeanEnum) {
+        return new RespBean<>(respBeanEnum.getCode(), respBeanEnum.getMessage(), null);
     }
 
     /**
@@ -75,8 +79,13 @@ public class RespBean {
      * @param obj
      * @return
      */
-    public static RespBean error(RespBeanEnum respBeanEnum, Object obj) {
-        return new RespBean(respBeanEnum.getCode(), respBeanEnum.getMessage(), obj);
+    public static <T> RespBean<T> error(RespBeanEnum respBeanEnum, T obj) {
+        return new RespBean<>(respBeanEnum.getCode(), respBeanEnum.getMessage(), obj);
+    }
+
+
+    public static <T> RespBean<T> error(long code,String message) {
+        return new RespBean<>(code,message);
     }
 
 

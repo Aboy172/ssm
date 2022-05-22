@@ -1,0 +1,14 @@
+server:
+  port: 5000
+spring:
+  application:
+    name: cym-crowd-short-message
+  cloud:
+    nacos:
+      discovery:
+        group: CROWD_GROUP
+        server-addr: localhost:8848
+        namespace: 293bbd0a-0222-4245-bb2d-3e066ccb5a36
+
+
+

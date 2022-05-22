@@ -1,6 +1,8 @@
+D:\java\ssm\crowdfunding-admin-parent\crowdfunding-common-util\src\main\java\com\cym\crowdfundingcommonutil\exception\GlobalException.java
 D:\java\ssm\crowdfunding-admin-parent\crowdfunding-common-util\src\main\java\com\cym\crowdfundingcommonutil\vo\RespBean.java
 D:\java\ssm\crowdfunding-admin-parent\crowdfunding-common-util\src\main\java\com\cym\crowdfundingcommonutil\CrowdfundingCommonUtilApplication.java
 D:\java\ssm\crowdfunding-admin-parent\crowdfunding-common-util\src\main\java\com\cym\crowdfundingcommonutil\utils\CrowdConstant.java
 D:\java\ssm\crowdfunding-admin-parent\crowdfunding-common-util\src\main\java\com\cym\crowdfundingcommonutil\vo\RespBeanEnum.java
+D:\java\ssm\crowdfunding-admin-parent\crowdfunding-common-util\src\main\java\com\cym\crowdfundingcommonutil\exception\CrowdExceptionResolver.java
 D:\java\ssm\crowdfunding-admin-parent\crowdfunding-common-util\src\main\java\com\cym\crowdfundingcommonutil\utils\CrowdUtils.java
 D:\java\ssm\crowdfunding-admin-parent\crowdfunding-common-util\src\main\java\com\cym\crowdfundingcommonutil\utils\UUIDUtil.java

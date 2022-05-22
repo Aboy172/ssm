@@ -1,69 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper
-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cym.crowdfundingadmincomponent.mapper.RoleMapper">
 
-    <resultMap id="BaseResultMap" type="com.cym.crowdfundingadmincomponent.pojo.Role">
-        <id property="id" column="id" jdbcType="INTEGER"/>
-        <result property="name" column="name" jdbcType="VARCHAR"/>
-        <result property="isDeleted" column="is_deleted" jdbcType="INTEGER"/>
-        <result property="version" column="version" jdbcType="INTEGER"/>
-    </resultMap>
+  <resultMap id="BaseResultMap" type="com.cym.crowdfundingadminentity.entity.pojo.Role">
+    <id property="id" column="id" jdbcType="INTEGER"/>
+    <result property="name" column="name" jdbcType="VARCHAR"/>
+    <result property="isDeleted" column="is_deleted" jdbcType="INTEGER"/>
+    <result property="version" column="version" jdbcType="INTEGER"/>
+  </resultMap>
 
-    <sql id="Base_Column_List">
-        id,name,is_deleted,
-        version
-    </sql>
-    <delete id="deleteInnerRoleAuthId">
-        delete from inner_role_auth
-        where role_id = #{roleId}
-    </delete>
+  <sql id="Base_Column_List">
+    id,name,is_deleted,
+    version
+  </sql>
+  <delete id="deleteInnerRoleAuthId">
+    delete from inner_role_auth
+    where role_id = #{roleId}
+  </delete>
 
-    <select id="selectOneByName" resultMap="BaseResultMap">
-        select
-        <include refid="Base_Column_List"/>
-        from t_role
-        where
-        <if test="name != null">name = #{name,jdbcType=VARCHAR}</if>
-        and is_deleted = 0
+  <select id="selectOneByName" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from t_role
+    where
+    <if test="name != null">name = #{name,jdbcType=VARCHAR}</if>
+    and is_deleted = 0
 
-    </select>
-    <insert id="insertSelective">
-        insert into t_role
-        <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="name != null">name</if>
-        </trim>
-        values
-        <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="name != null">#{name,jdbcType=VARCHAR}</if>
-        </trim>
-    </insert>
-    <insert id="saveAdminRoleRelationship">
-        insert into inner_role_auth
-        <trim prefix="(" suffix=")" suffixOverrides=",">
-            role_id,auth_id
-        </trim>
-        values
-        <foreach collection="authIdArray" item="authId" separator=",">(#{roleId},#{authId})</foreach>
-    </insert>
-    <select id="selectAssignedById" resultMap="BaseResultMap">
-        select
-        <include refid="Base_Column_List"/>
-        from t_role
-        WHERE is_deleted = 0 AND
-        id IN (SELECT role_id
-        FROM inner_admin_role WHERE admin_id = #{id})
+  </select>
+  <insert id="insertSelective">
+    insert into t_role
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="name != null">name</if>
+    </trim>
+    values
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="name != null">#{name,jdbcType=VARCHAR}</if>
+    </trim>
+  </insert>
+  <insert id="saveAdminRoleRelationship">
+    insert into inner_role_auth
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      role_id,auth_id
+    </trim>
+    values
+    <foreach collection="authIdArray" item="authId" separator=",">(#{roleId},#{authId})</foreach>
+  </insert>
+  <select id="selectAssignedById" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from t_role
+    WHERE is_deleted = 0 AND
+    id IN (SELECT role_id
+    FROM inner_admin_role WHERE admin_id = #{id})
 
-    </select>
-    <select id="selectUnAssignById" resultMap="BaseResultMap">
-        select
-        <include refid="Base_Column_List"/>
-        from t_role
-        WHERE is_deleted = 0 AND
-        id NOT IN (SELECT role_id
-        FROM inner_admin_role WHERE admin_id = #{id})
-    </select>
+  </select>
+  <select id="selectUnAssignById" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from t_role
+    WHERE is_deleted = 0 AND
+    id NOT IN (SELECT role_id
+    FROM inner_admin_role WHERE admin_id = #{id})
+  </select>
 
 
 </mapper>

@@ -7,10 +7,8 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 /**
- * program: ssm
- * Date: 2022-04-02  21:25
- * Author: cym
- * Description:
+ * program: ssm Date: 2022-04-02  21:25 Author: cym Description:
+ *
  * @author 86152
  */
 @EqualsAndHashCode(callSuper = true)
@@ -19,5 +17,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class AdminExitsAddException extends RuntimeException {
 
-    private RespBeanEnum respBeanEnum;
+  private RespBeanEnum respBeanEnum;
 }

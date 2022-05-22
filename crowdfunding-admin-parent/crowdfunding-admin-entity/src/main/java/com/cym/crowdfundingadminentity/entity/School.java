@@ -1,4 +1,4 @@
-package com.cym.atcrowdfunding04adminentity.entity;
+package com.cym.crowdfundingadminentity.entity;
 
 import lombok.Data;
 
@@ -7,6 +7,7 @@ import lombok.Data;
  * Date: 2022-03-29  21:42
  * Author: cym
  * Description:
+ * @author cym
  */
 @Data
 public class School {

@@ -1,5 +1,3 @@
-
-
 package com.cym.crowdfundingadmincomponent.exception;
 
 import com.cym.crowdfundingcommonutil.vo.RespBeanEnum;
@@ -16,6 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class GlobalException extends RuntimeException {
-    private RespBeanEnum respBeanEnum;
+
+  private RespBeanEnum respBeanEnum;
 
 }

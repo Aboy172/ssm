@@ -7,17 +7,16 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 /**
- * program: ssm
- * Date: 2022-04-10  19:31
- * Author: cym
- * Description:
+ * program: ssm Date: 2022-04-10  19:31 Author: cym Description:
+ *
  * @author 86152
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UnAccessAuthException extends  RuntimeException {
-    private RespBeanEnum respBeanEnum;
+public class UnAccessAuthException extends RuntimeException {
+
+  private RespBeanEnum respBeanEnum;
 
 }

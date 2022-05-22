@@ -16,6 +16,7 @@
         <mybatisplus-version>3.5.1</mybatisplus-version>
         <com.cym.springboot.verson>2.6.7</com.cym.springboot.verson>
         <spring-security-version>5.6.1</spring-security-version>
+        <lombok.version>1.18.20</lombok.version>
 
     </properties>
     <modules>
@@ -26,6 +27,7 @@
     </modules>
     <dependencyManagement>
     <dependencies>
+
         <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
@@ -80,22 +82,11 @@
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-config -->
         <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-config</artifactId>
-            <version>5.6.1</version>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-core</artifactId>
-            <version>5.6.1</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-web</artifactId>
-            <version>5.6.1</version>
-        </dependency>
-
     </dependencies>
     </dependencyManagement>
     <build>

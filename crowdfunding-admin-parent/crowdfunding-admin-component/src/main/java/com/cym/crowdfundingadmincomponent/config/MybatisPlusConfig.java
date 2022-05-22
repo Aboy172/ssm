@@ -9,28 +9,27 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * program: ssm
- * Date: 2022-03-30  22:58
- * Author: cym
- * Description:
+ * program: ssm Date: 2022-03-30  22:58 Author: cym Description:
+ *
  * @author 86152
  */
-@Configuration
+@Configuration(proxyBeanMethods = false)
 @MapperScan("com.cym.crowdfundingadmincomponent.mapper")
 public class MybatisPlusConfig {
 
-    /**
-     *  注册mybatisPlus插件
-     * @return
-     */
-    @Bean
-    public MybatisPlusInterceptor mybatisPlusInterceptor(){
-        MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
-        //分页插件
-        interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));
-        //乐观锁插件
-        interceptor.addInnerInterceptor(new OptimisticLockerInnerInterceptor());
-        return interceptor;
-    }
+  /**
+   * 注册mybatisPlus插件
+   *
+   * @return
+   */
+  @Bean
+  public MybatisPlusInterceptor mybatisPlusInterceptor() {
+    MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
+    //分页插件
+    interceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));
+    //乐观锁插件
+    interceptor.addInnerInterceptor(new OptimisticLockerInnerInterceptor());
+    return interceptor;
+  }
 
 }

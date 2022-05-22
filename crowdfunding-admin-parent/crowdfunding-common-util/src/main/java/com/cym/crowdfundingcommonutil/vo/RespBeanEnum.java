@@ -10,7 +10,9 @@ import lombok.*;
 @ToString
 @Getter
 public enum RespBeanEnum {
-
+  /**
+   * 统一返回json数据结构集
+   */
   SUCCESS(200, "SUCCESS"),
   ERROR(500, "服务器启动失败"),
 
@@ -28,15 +30,13 @@ public enum RespBeanEnum {
 
   MENU_NAME_IS_EXITS(42001, "名称重复，请重试"),
   MENU_ID_ERROR(42002, "标签不存在"),
-  MENU_PID_ERROR(42003, "参数异常"),
   MENU_REPEAT_OPERATION(42004, "重复操作"),
 
   AUTH_IS_NOT_EXITS(43001, "抱歉，不允许访问"),
 
   NULL_ENTITY(50000, "抱歉，找不到任何信息"),
-
-
-  NULL_EXCEPTION(0, "发生错误，请重试");
+  NULL_EXCEPTION(0, "发生错误，请重试"),
+  MENU_PID_ERROR(50001, "参数异常");
   private final Integer code;
   private final String message;
 }
