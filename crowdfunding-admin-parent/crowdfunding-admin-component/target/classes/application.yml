@@ -1,12 +1,14 @@
 spring:
   web:
     resources:
+      chain:
+        enabled: true
+        compressed: true
       cache:
         cachecontrol:
           max-age: 3600
-      chain:ject_c
-      compressed: true
-      enabled: true
+
+
   # 解决springboot 2.6版本循环依赖的问题，暂时恢复2.5的行为
   main:
     allow-circular-references: true
