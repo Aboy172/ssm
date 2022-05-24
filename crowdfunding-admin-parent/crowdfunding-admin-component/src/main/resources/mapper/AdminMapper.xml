@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cym.crowdfundingadmincomponent.mapper.AdminMapper">
+
+  <resultMap id="BaseResultMap" type="com.cym.crowdfundingadminentity.entity.pojo.Admin">
+    <id property="id" column="id" jdbcType="INTEGER"/>
+    <result property="loginAcct" column="login_acct" jdbcType="VARCHAR"/>
+    <result property="userPswd" column="user_pswd" jdbcType="CHAR"/>
+    <result property="userName" column="user_name" jdbcType="VARCHAR"/>
+    <result property="email" column="email" jdbcType="VARCHAR"/>
+    <result property="createTime" column="create_time" jdbcType="CHAR"/>
+    <result property="isDeleted" column="is_deleted" jdbcType="INTEGER"/>
+    <result property="version" column="version" jdbcType="INTEGER"/>
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    id,login_acct,user_name,user_pswd,create_time,is_deleted,version
+  </sql>
+
+
+  <select id="selectOneByUserNameAndUserPswd" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from t_admin
+    where
+    user_name = #{userName,jdbcType=VARCHAR}
+    AND user_pswd = #{userPswd,jdbcType=VARCHAR}
+  </select>
+  <select id="selectOneByLoginAcctAndUserPswd" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from t_admin
+    where
+    login_acct = #{loginAcct,jdbcType=VARCHAR}
+    AND user_pswd = #{userPswd,jdbcType=VARCHAR}
+  </select>
+
+  <select id="selectByLoginAcctAndUserNameAndEmail" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from t_admin
+    where
+    login_acct = #{loginAcct,jdbcType=VARCHAR}
+    AND user_name = #{userName,jdbcType=VARCHAR}
+    AND email = #{email,jdbcType=VARCHAR}
+  </select>
+  <insert id="insertSelective">
+    insert into t_admin
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">id,</if>
+      <if test="loginAcct != null">login_acct,</if>
+      <if test="userName != null">user_name,</if>
+      <if test="userPswd != null">user_pswd,</if>
+      <if test="email != null">email,</if>
+      <if test="createTime != null">create_time,</if>
+      <if test="isDeleted != null">is_deleted,</if>
+      <if test="version != null">version,</if>
+    </trim>
+    values
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">#{id,jdbcType=INTEGER},</if>
+      <if test="loginAcct != null">#{loginAcct,jdbcType=VARCHAR},</if>
+      <if test="userName != null">#{userName,jdbcType=VARCHAR},</if>
+      <if test="userPswd != null">#{userPswd,jdbcType=CHAR},</if>
+      <if test="email != null">#{email,jdbcType=VARCHAR},</if>
+      <if test="createTime != null">#{createTime,jdbcType=CHAR},</if>
+      <if test="isDeleted != null">#{isDeleted,jdbcType=INTEGER},</if>
+      <if test="version != null">#{version,jdbcType=INTEGER},</if>
+    </trim>
+  </insert>
+  <update id="updateAdmin">
+    update t_admin
+    set
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">id = #{id,jdbcType=INTEGER},</if>
+      <if test="loginAcct != null">login_acct = #{loginAcct,jdbcType=VARCHAR},</if>
+      <if test="userName != null">user_name = #{userName,jdbcType=VARCHAR},</if>
+      <if test="userPswd != null">user_pswd = #{userPswd,jdbcType=CHAR},</if>
+      <if test="email != null">email = #{email,jdbcType=VARCHAR},</if>
+      <if test="createTime != null">create_time =#{createTime,jdbcType=CHAR},</if>
+    </trim>
+  </update>
+  <select id="selectByLoginAcct" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from t_admin
+    where
+    login_acct = #{loginAcct,jdbcType=VARCHAR}
+  </select>
+
+  <select id="selectOneByLoginAcct" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from t_admin
+    where
+    login_acct = #{loginAcct,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAllByLoginAcct" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from t_admin
+    where
+    login_acct = #{loginAcct,jdbcType=VARCHAR}
+  </select>
+
+  <delete id="deleteByAdminId">
+    delete from inner_admin_role where admin_id=#{adminId}
+  </delete>
+
+  <insert id="insertNewRelationship">
+    insert into inner_admin_role
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      admin_id,role_id
+    </trim>
+    values
+    <foreach collection="roleIdList" item="roleId" separator=",">(#{adminId},#{roleId})</foreach>
+  </insert>
+</mapper>

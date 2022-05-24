@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>404</title>
+</head>
+<link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
+<link rel="stylesheet" th:href="@{/css/login.css}">
+<script type="text/javascript" th:src="@{/jquery/jquery-2.1.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/jquery/jquery-form.min.js}"></script>
+<script type="text/javascript">
+  $(function (){
+    $("#btn1").click(function(){
+      window.history.back();
+    })
+  })
+  $(function (){
+    $("#btn2").click(function(){
+      window.location.href= '/admin-login.html';
+    })
+  })
+  $(function (){
+    $("#btn3").click(function(){
+      window.location.href= '/admin-main.html';
+    })
+  })
+
+
+</script>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <div><a class="navbar-brand" th:href="@{/admin-maim.html}" style="font-size:32px;">尚筹网-创意产品众筹平台</a></div>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <h2 class="form-signin-heading" style="text-align: center;"><i class="glyphicon glyphicon-log-in"></i> 系统错误信息</h2>
+  <h3 style="text-align:  center">404</h3>
+  <button type="button" id="btn1" class="btn btn-light">回到上一页</button>
+  <button type="button" id="btn2" class="btn btn-light">回到登录页面</button>
+  <button type="button" id="btn3" class="btn btn-light">回到主页面</button>
+</div>
+</body>
+</html>
