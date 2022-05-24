@@ -2,9 +2,9 @@ package com.cym.crowdfundingadmincomponent;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.cym.crowdfundingadmincomponent.mapper.AdminMapper;
-import com.cym.crowdfundingadmincomponent.pojo.Admin;
 import com.cym.crowdfundingadmincomponent.service.AdminService;
 import com.cym.crowdfundingadmincomponent.exception.GlobalException;
+import com.cym.crowdfundingadminentity.entity.pojo.Admin;
 import com.cym.crowdfundingcommonutil.vo.RespBeanEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;

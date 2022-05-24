@@ -8,8 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 public class CrowdfundingAdminWebuiApplication {
-    public static void main (String[] args) {
-        SpringApplication.run(CrowdfundingAdminWebuiApplication.class,args);
-    }
+
+  public static void main(String[] args){
+    SpringApplication.run(CrowdfundingAdminWebuiApplication.class, args);
+  }
+
 
 }

@@ -3,9 +3,9 @@ package com.cym.crowdfundingadmincomponent;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.cym.crowdfundingadmincomponent.mapper.AdminMapper;
-import com.cym.crowdfundingadmincomponent.pojo.Admin;
 import com.cym.crowdfundingadmincomponent.service.AdminService;
 import com.cym.crowdfundingadmincomponent.service.AuthService;
+import com.cym.crowdfundingadminentity.entity.pojo.Admin;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

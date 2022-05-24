@@ -13,7 +13,6 @@ public class CrowdfundingAdminComponentApplication {
 
   public static void main(String[] args) {
     SpringApplication.run(CrowdfundingAdminComponentApplication.class, args);
-
   }
 
 }
