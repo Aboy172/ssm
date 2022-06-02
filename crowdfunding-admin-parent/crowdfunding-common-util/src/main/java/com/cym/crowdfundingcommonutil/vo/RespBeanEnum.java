@@ -1,6 +1,8 @@
 package com.cym.crowdfundingcommonutil.vo;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.ToString;
 
 /**
  * @author cym
@@ -37,6 +39,8 @@ public enum RespBeanEnum {
   NULL_ENTITY(50000, "抱歉，找不到任何信息"),
   NULL_EXCEPTION(0, "发生错误，请重试"),
   MENU_PID_ERROR(50001, "参数异常");
+
+
   private final Integer code;
   private final String message;
 }

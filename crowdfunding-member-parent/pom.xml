@@ -19,6 +19,7 @@
     <module>crowdfunding-member-authentication-consumer</module>
     <module>crowdfunding-member-project-consumer</module>
     <module>crowdfunding-member-gateway</module>
+    <module>crowdfunding-short-message</module>
   </modules>
 
   <properties>

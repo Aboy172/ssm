@@ -2,7 +2,8 @@ package com.cym.crowdfundingcommonutil.exception;
 
 import com.cym.crowdfundingcommonutil.vo.RespBeanEnum;
 import com.cym.crowdfundingcommonutil.vo.error.MemberFailCode;
-import com.cym.crowdfundingcommonutil.vo.success.MemberSuccessCode;
+import com.cym.crowdfundingcommonutil.vo.error.RedisFailCode;
+import com.cym.crowdfundingcommonutil.vo.error.SendMessageFailCode;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -14,48 +15,42 @@ import lombok.NoArgsConstructor;
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class GlobalException extends RuntimeException {
 
 
   private RespBeanEnum respBeanEnum;
 
-  private MemberSuccessCode memberSuccessCode;
 
   private MemberFailCode memberFailCode;
+
+  private RedisFailCode redisFailCode;
+
+  private SendMessageFailCode sendMessageFailCode;
 
   public GlobalException(RespBeanEnum respBeanEnum) {
     this.respBeanEnum = respBeanEnum;
   }
 
-  public GlobalException(String message, RespBeanEnum respBeanEnum) {
-    super(message);
-    this.respBeanEnum = respBeanEnum;
-  }
-
-  public GlobalException(String message, Throwable cause, RespBeanEnum respBeanEnum) {
+  public GlobalException(String message, Throwable cause, SendMessageFailCode sendMessageFailCode) {
     super(message, cause);
-    this.respBeanEnum = respBeanEnum;
+    this.sendMessageFailCode = sendMessageFailCode;
   }
 
-  public GlobalException(Throwable cause, RespBeanEnum respBeanEnum) {
-    super(cause);
-    this.respBeanEnum = respBeanEnum;
+  public GlobalException(RedisFailCode redisFailCode) {
+    this.redisFailCode = redisFailCode;
   }
 
-  public GlobalException(String message, Throwable cause, boolean enableSuppression,
-      boolean writableStackTrace, RespBeanEnum respBeanEnum) {
-    super(message, cause, enableSuppression, writableStackTrace);
+  public GlobalException(String message, RespBeanEnum respBeanEnum) {
     this.respBeanEnum = respBeanEnum;
-  }
-
-  public GlobalException() {
   }
 
   public GlobalException(MemberFailCode memberFailCode) {
     this.memberFailCode = memberFailCode;
   }
 
-  public GlobalException(MemberSuccessCode memberSuccessCode) {
-    this.memberSuccessCode = memberSuccessCode;
+  public GlobalException(SendMessageFailCode sendMessageFailCode) {
+    this.sendMessageFailCode = sendMessageFailCode;
   }
 }
