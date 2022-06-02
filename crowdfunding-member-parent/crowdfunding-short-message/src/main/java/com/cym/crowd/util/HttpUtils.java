@@ -11,7 +11,7 @@ import java.util.Map;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.HttpClient;
@@ -86,7 +86,7 @@ public class HttpUtils {
       for (String key : bodys.keySet()) {
         nameValuePairList.add(new BasicNameValuePair(key, bodys.get(key)));
       }
-      UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(nameValuePairList, "utf-8");
+      UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(nameValuePairList);
       formEntity.setContentType("application/x-www-form-urlencoded; charset=UTF-8");
       request.setEntity(formEntity);
     }

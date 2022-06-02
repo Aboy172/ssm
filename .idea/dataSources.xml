@@ -15,5 +15,32 @@
       <jdbc-url>jdbc:mysql://localhost:3306/security</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="crowdfunding-admin-component/Hibernate" uuid="36cc9990-c47d-4970-a9a8-4a8b8248f6e3">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/project_crowd?serverTimezone=GMT%2B8&amp;characterEncoding=utf-8&amp;useSSL=false</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="atcrowdfunding-admin-webui/Hibernate" uuid="897bc615-3b65-440b-ac81-d2b6a2eb419d">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/project_crowd?serverTimezone=GMT%2B8&amp;characterEncoding=utf-8&amp;useSSL=false</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="crowdfunding-member-mysql-provider/Hibernate" uuid="21e1f9b0-d498-4816-81a9-0f83a2510887">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/project_crowd?serverTimezone=GMT%2B8&amp;characterEncoding=utf-8&amp;useSSL=false</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

@@ -15,18 +15,22 @@
     <file url="file://$PROJECT_DIR$/crowdfunding-admin-parent/crowdfunding-common-util/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding-admin-parent/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding-admin-parent/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-authentication-consumer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-authentication-consumer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-entity/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-entity/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-mysql-provider/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-mysql-provider/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-nacos/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-nacos/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-project-consumer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-project-consumer/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-redis-provider/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-member-redis-provider/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-short-message/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/crowdfunding-short-message/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding-member-parent/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/crowdfunding01-admin-parent/atcrowdfunding02-admin-webui/src/main/java" charset="UTF-8" />

@@ -38,4 +38,11 @@ public class CrowdConstant {
     public static final String MESSAGE_STATIC_INVALIDATE  = "静态资源路径无效";
 
     public static final String MEMBER_TICKET = "memberTicket";
+
+
+    public static final String MESSAGE_STATUS_RATE_LIMIT = "RATE_LIMIT";
+    public static final String MESSAGE_STATUS_OK = "OK";
+
+
+
 }
