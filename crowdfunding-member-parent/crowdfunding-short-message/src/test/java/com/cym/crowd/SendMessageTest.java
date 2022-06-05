@@ -1,8 +1,6 @@
 package com.cym.crowd;
 
-import cn.hutool.json.JSONObject;
 import com.cym.crowd.config.ShortMessageProperties;
-import com.cym.crowd.message.SendMessage;
 import com.cym.crowdfundingcommonutil.exception.GlobalException;
 import com.cym.crowdfundingcommonutil.utils.CrowdUtils;
 import com.cym.crowdfundingcommonutil.vo.RespBean;
@@ -11,7 +9,6 @@ import javax.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 /**
@@ -38,8 +35,8 @@ public class SendMessageTest {
           shortMessageProperties.getMethod(), shortMessageProperties.getAppcode(),
           shortMessageProperties.getHeader(), "15207553802",
           shortMessageProperties.getTemplateId());
-      Assertions.assertEquals(200,stringRespBean.getCode());
-    }  catch (Exception e) {
+      Assertions.assertEquals(200, stringRespBean.getCode());
+    } catch (Exception e) {
       throw new GlobalException(SendMessageFailCode.SEND_MESSAGE_ERROR);
     }
   }

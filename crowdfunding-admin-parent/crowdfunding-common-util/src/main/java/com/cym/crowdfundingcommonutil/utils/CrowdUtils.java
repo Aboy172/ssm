@@ -27,14 +27,13 @@ public class CrowdUtils {
   }
 
   /**
-   *
-   * @param host 服务器地址
-   * @param path 请求路径
-   * @param method 请求方式
-   * @param appcode appcode
-   * @param header 请求头信息
+   * @param host        服务器地址
+   * @param path        请求路径
+   * @param method      请求方式
+   * @param appcode     appcode
+   * @param header      请求头信息
    * @param phoneNumber 手机号
-   * @param templateId 模板id
+   * @param templateId  模板id
    * @return 调用结果
    * @throws Exception 抛出所有会发生的异常
    */
