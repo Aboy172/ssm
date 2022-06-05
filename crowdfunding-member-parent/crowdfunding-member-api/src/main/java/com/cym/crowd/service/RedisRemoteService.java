@@ -2,12 +2,11 @@ package com.cym.crowd.service;
 
 import com.cym.crowdfundingcommonutil.vo.RespBean;
 import java.util.concurrent.TimeUnit;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * @author cym
@@ -37,10 +36,9 @@ public interface RedisRemoteService {
    * @param timeUnit 单位
    * @return 返回设置结果
    */
-  @PostMapping("/set/redis/{key}/{value}/{time}/{timeUnix}")
-  RespBean<String> setRedisKeyValueWithTimeout(@PathVariable("key") String key,
-      @PathVariable("value") String value, @PathVariable("time") long time,
-      @PathVariable("timeUnix") TimeUnit timeUnit);
+  @PostMapping("/set/redis/key/value/time")
+  RespBean<String> setRedisKeyValueWithTimeout(@RequestParam("key")String key,@RequestParam("value") String value,
+      @RequestParam("time")Integer time,@RequestParam("timeUnit")TimeUnit timeUnit);
 
   /**
    * 远程调用redis获取key值接口
@@ -60,18 +58,5 @@ public interface RedisRemoteService {
   @GetMapping("/remove/redis/string/{key}")
   RespBean<String> removeRedisKeyValue(@PathVariable("key") String key);
 
-  /**
-   * 设置session到redis数据库中
-   *
-   * @param request
-   * @param response
-   * @return
-   */
-  @GetMapping("/sava/member/to/ticket")
-  RespBean<String> setMemberTicket(HttpServletRequest request,
-      HttpServletResponse response);
-
-  @GetMapping("/get/member/ticket")
-  RespBean<String> getMemberTicket();
 
 }

@@ -41,7 +41,6 @@
             <artifactId>unified-dispose-springboot-starter</artifactId>
             <version>0.1.2.RELEASE</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

@@ -44,5 +44,5 @@ public class CrowdConstant {
     public static final String MESSAGE_STATUS_OK = "OK";
 
 
-
+  public static final Object REDIS_CODE_PREFIX = "REDIS_CODE_PREFIX";
 }

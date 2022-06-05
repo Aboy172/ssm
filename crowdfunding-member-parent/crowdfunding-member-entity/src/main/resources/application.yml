@@ -1,0 +1,12 @@
+server:
+  port: 7000
+spring:
+  application:
+    name: cym-crowd-entity
+
+  cloud:
+    nacos:
+      discovery:
+        group: CROWD_GROUP
+        server-addr: localhost:8848
+        namespace: 293bbd0a-0222-4245-bb2d-3e066ccb5a36

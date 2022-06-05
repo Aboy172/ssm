@@ -13,16 +13,6 @@ spring:
         group: CROWD_GROUP
         server-addr: localhost:8848
         namespace: 293bbd0a-0222-4245-bb2d-3e066ccb5a36
-  redis:
-    host: 45.76.171.188   #指定redis服务器
-    port: 6379
-    password: taAEnnBLgB7OVqLL
-    database: 0
-    lettuce:
-      pool:
-        max-active: 32
-        max-wait: 300ms
-        max-idle: 16
-        min-idle: 8
+
 
 

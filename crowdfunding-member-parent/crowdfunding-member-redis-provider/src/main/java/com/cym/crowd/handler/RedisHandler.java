@@ -53,15 +53,13 @@ public class RedisHandler {
    * @param timeUnit 单位
    * @return 返回设置结果
    */
-  @PostMapping("/set/redis/{key}/{value}/with/{time}/timeUnix")
-  public RespBean<String> setRedisKeyValueWithTimeout(@PathVariable("key") String key,
-      @PathVariable("value") String value, @PathVariable("time") long time,
-      @RequestParam("timeUnix") TimeUnit timeUnit) {
 
+  @PostMapping("/set/redis/key/value/time")
+  RespBean<String> setRedisKeyValueWithTimeout(@RequestParam("key")String key,@RequestParam("value") String value,
+      @RequestParam("time")Integer time,@RequestParam("timeUnit") TimeUnit timeUnit ){
     try {
-
       ValueOperations<String, String> operations = redisTemplate.opsForValue();
-      operations.set(key, value, time, timeUnit);
+      operations.set(key, value, time,timeUnit);
       return RespBean.success(null);
     } catch (Exception e) {
       return new RespBean<>(RedisFailCode.NULL_ERROR_MEMBERS.getMessage());
