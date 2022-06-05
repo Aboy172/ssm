@@ -2,6 +2,7 @@ package com.cym.crowd.handler;
 
 import com.cym.crowd.entity.po.Member;
 import com.cym.crowd.service.MySqlRemoteService;
+import com.cym.crowd.service.ShortMessageRemoteService;
 import com.cym.crowdfundingcommonutil.exception.GlobalException;
 import com.cym.crowdfundingcommonutil.vo.RespBean;
 import com.cym.crowdfundingcommonutil.vo.RespBeanEnum;
@@ -21,6 +22,9 @@ public class MemberRemoteHandler {
   @Resource
   private MySqlRemoteService mySqlRemoteService;
 
+  @Resource
+  private ShortMessageRemoteService shortMessageRemoteService;
+
   @GetMapping("/remote/get/member/by/{loginacct}")
   public RespBean<Member> getMemberByLoginAcct(@PathVariable("loginacct") String loginacct) {
     if (loginacct == null) {
@@ -29,5 +33,9 @@ public class MemberRemoteHandler {
     return mySqlRemoteService.getMemberByLoginAcct(loginacct);
   }
 
+  @GetMapping("/send/message/remote/{phoneNumber}")
+  public RespBean<String> sendMessage(@PathVariable("phoneNumber") String phoneNumber) {
+    return shortMessageRemoteService.sendMessage(phoneNumber);
+  }
 
 }
