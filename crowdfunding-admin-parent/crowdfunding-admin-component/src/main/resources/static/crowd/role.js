@@ -92,7 +92,6 @@ function generaPage() {
 
 }
 
-//远程访问服务器，获取分页数据
 function getPageRemote() {
   var ajaxResult = $.ajax({
     "url": "/role/get/page.html",

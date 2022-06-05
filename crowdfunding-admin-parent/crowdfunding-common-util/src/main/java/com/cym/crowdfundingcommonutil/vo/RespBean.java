@@ -8,12 +8,11 @@
  */
 package com.cym.crowdfundingcommonutil.vo;
 
-import java.lang.reflect.Type;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author 86152

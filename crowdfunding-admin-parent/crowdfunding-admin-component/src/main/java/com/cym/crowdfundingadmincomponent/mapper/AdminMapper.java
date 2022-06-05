@@ -3,6 +3,7 @@ package com.cym.crowdfundingadmincomponent.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.cym.crowdfundingadminentity.entity.pojo.Admin;
 import java.util.List;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Repository;
  * @createDate 2022-03-30 11:36:44
  * @Entity com.cym.crowdfundingadmincomponent.pojo.Admin
  */
-@Repository
+@Mapper
 public interface AdminMapper extends BaseMapper<Admin> {
 
   /**

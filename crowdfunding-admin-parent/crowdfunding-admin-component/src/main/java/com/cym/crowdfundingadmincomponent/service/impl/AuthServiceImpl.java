@@ -46,8 +46,8 @@ public class AuthServiceImpl extends ServiceImpl<AuthMapper, Auth>
    */
   @Override
   public List<Integer> getAssignedAuthIdByRoleId(Integer roleId) {
-    List<Integer> list = authMapper.selectAssignedAuthIdByRoleId(roleId);
-    return list;
+
+    return authMapper.selectAssignedAuthIdByRoleId(roleId);
   }
 
   /**

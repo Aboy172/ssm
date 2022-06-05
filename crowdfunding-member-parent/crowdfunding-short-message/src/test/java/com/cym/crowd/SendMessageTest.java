@@ -1,9 +1,6 @@
 package com.cym.crowd;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> dev
 import com.cym.crowd.config.ShortMessageProperties;
 import com.cym.crowdfundingcommonutil.exception.GlobalException;
 import com.cym.crowdfundingcommonutil.utils.CrowdUtils;
@@ -46,6 +43,5 @@ public class SendMessageTest {
     } catch (Exception e) {
       throw new GlobalException(SendMessageFailCode.SEND_MESSAGE_ERROR);
     }
-
   }
 }

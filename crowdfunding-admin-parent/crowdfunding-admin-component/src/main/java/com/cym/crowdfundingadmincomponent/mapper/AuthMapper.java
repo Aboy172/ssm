@@ -3,6 +3,7 @@ package com.cym.crowdfundingadmincomponent.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.cym.crowdfundingadminentity.entity.pojo.Auth;
 import java.util.List;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Repository;
  * @createDate 2022-04-07 09:02:50
  * @Entity com.cym.crowdfundingadmincomponent.pojo.Auth
  */
-@Repository
+@Mapper
 public interface AuthMapper extends BaseMapper<Auth> {
 
   List<Integer> selectAssignedAuthIdByRoleId(@Param("roleId") Integer roleId);

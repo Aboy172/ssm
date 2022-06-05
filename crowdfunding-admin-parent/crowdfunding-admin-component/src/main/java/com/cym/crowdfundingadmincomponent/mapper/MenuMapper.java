@@ -2,6 +2,7 @@ package com.cym.crowdfundingadmincomponent.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.cym.crowdfundingadminentity.entity.pojo.Menu;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Repository;
  * @createDate 2022-04-05 21:39:14
  * @Entity com.cym.crowdfundingadmincomponent.pojo.Menu
  */
-@Repository
+@Mapper
 public interface MenuMapper extends BaseMapper<Menu> {
 
 }

@@ -3,6 +3,7 @@ package com.cym.crowdfundingadmincomponent.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.cym.crowdfundingadminentity.entity.pojo.Role;
 import java.util.List;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -13,7 +14,7 @@ import org.springframework.stereotype.Repository;
  * @Entity com.cym.crowdfundingadmincomponent.pojo.Role
  */
 
-@Repository
+@Mapper
 public interface RoleMapper extends BaseMapper<Role> {
 
   Role selectOneByName(@Param("name") String name);

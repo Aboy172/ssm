@@ -15,6 +15,7 @@ import java.util.Objects;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ObjectUtils;
 
 /**
  * @author 86152
@@ -107,7 +108,7 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role>
     //迭代，如果用户不存在返回用户不存在异常
     roleIdList.forEach(item -> {
       Role role = roleMapper.selectById(item);
-      if (role == null) {
+      if (ObjectUtils.isEmpty(role)) {
         throw new GlobalException(RespBeanEnum.ROLE_IS_NOT_EXITS);
       }
 
@@ -155,7 +156,7 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role>
       throw new GlobalException(RespBeanEnum.ROLE_IS_NOT_EXITS);
     }
     //如果authIdArray为0，说明没有做任何操作，直接返回
-    if (authIdArray.size() == 0) {
+    else if (authIdArray.size() == 0) {
       return 1;
     }
     Integer roleId = roleIdList.get(0);
@@ -177,7 +178,7 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role>
   private void keepRoleName(Integer roleId, String roleName) {
     Role role = roleMapper.selectOneByName(roleName);
     //如果为空说明角色名不存在，直接退出
-    if (role == null) {
+    if (ObjectUtils.isEmpty(role)) {
       return;
     }
     //如果不是空，去查询是否跟其他角色id相同，如果roleId和查询出来的roleId不同说明角色重复，抛出角色重复异常

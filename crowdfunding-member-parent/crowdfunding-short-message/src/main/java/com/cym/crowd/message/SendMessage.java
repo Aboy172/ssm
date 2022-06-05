@@ -2,8 +2,8 @@ package com.cym.crowd.message;
 
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
-import com.cym.crowd.util.HttpUtils;
 import com.cym.crowdfundingcommonutil.exception.GlobalException;
+import com.cym.crowdfundingcommonutil.utils.HttpUtils;
 import com.cym.crowdfundingcommonutil.vo.error.SendMessageFailCode;
 import java.util.HashMap;
 import java.util.Map;

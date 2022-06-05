@@ -1,5 +1,6 @@
 package com.cym.crowdfundingcommonutil.exception;
 
+import com.cym.crowdfundingcommonutil.vo.RespBean;
 import com.cym.crowdfundingcommonutil.vo.RespBeanEnum;
 import com.cym.crowdfundingcommonutil.vo.error.MemberFailCode;
 import com.cym.crowdfundingcommonutil.vo.error.RedisFailCode;

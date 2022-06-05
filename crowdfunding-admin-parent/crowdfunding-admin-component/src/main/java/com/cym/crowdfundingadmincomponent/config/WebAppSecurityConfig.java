@@ -2,7 +2,6 @@ package com.cym.crowdfundingadmincomponent.config;
 
 import com.cym.crowdfundingcommonutil.constant.CrowdConstant;
 import org.apache.logging.log4j.util.Strings;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -12,6 +11,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
+import javax.annotation.Resource;
 
 /**
  * program: ssm Date: 2022-04-07  22:00 Author: cym Description: Security配置类
@@ -25,7 +26,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 public class WebAppSecurityConfig extends WebSecurityConfigurerAdapter {
 
 
-  @Autowired
+  @Resource
   private UserDetailsService userDetailsService;
 
 
@@ -86,7 +87,7 @@ public class WebAppSecurityConfig extends WebSecurityConfigurerAdapter {
           if (Strings.isEmpty(request.getParameter(CrowdConstant.ATTR_LOGINACCT))
               || Strings.isEmpty(request.getParameter(CrowdConstant.ATTR_USERPSWD))) {
             request.setAttribute(CrowdConstant.ATTR_LOGIN_ERROR,
-                CrowdConstant.ATTR_USN_OR_PSW_NULL);
+                    CrowdConstant.ATTR_USN_OR_PSW_NULL);
           }
           if (Strings.isNotBlank(request.getParameter(CrowdConstant.ATTR_LOGINACCT))
               && Strings.isNotBlank(request.getParameter(CrowdConstant.ATTR_USERPSWD))) {

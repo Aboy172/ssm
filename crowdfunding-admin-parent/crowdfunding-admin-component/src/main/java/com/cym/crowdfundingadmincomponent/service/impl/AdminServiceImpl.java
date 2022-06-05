@@ -16,11 +16,16 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
+
+import freemarker.template.utility.StringUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
+import org.springframework.util.ObjectUtils;
+import org.thymeleaf.util.StringUtils;
 
 /**
  * @author 86152
@@ -184,23 +189,23 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin>
   public int saveAdminRoleRelationship(Integer adminId, List<Integer> roleIdList) {
     int saveResult = 0;
     //健壮性判断
-    if (Objects.isNull(adminId)) {
+    if (ObjectUtils.isEmpty(adminId)) {
       return saveResult;
     }
     //对集合中的每个角色进行检查，确保id不为null
-    if (roleIdList == null) {
+    if (CollectionUtils.isEmpty(roleIdList)) {
       saveResult = 1;
       return saveResult;
     }
     for (Integer roleId : roleIdList) {
-      if (roleId == null) {
+      if (ObjectUtils.isEmpty(roleId)) {
         return saveResult;
       }
       //获取当前的角色信息
       Role role = roleMapper.selectById(roleId);
       log.info("Role " + role);
       //找不到说明角色不存在,直接返回
-      if (role == null) {
+      if (ObjectUtils.isEmpty(null)) {
         return saveResult;
       }
     }
@@ -220,7 +225,7 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin>
    */
   @Override
   public Admin getLoginAcctByLoginAcct(String loginAcct) {
-    if (loginAcct == null) {
+    if (StringUtils.isEmpty(loginAcct)) {
       return null;
     }
     return adminMapper.selectOneByLoginAcct(loginAcct);
@@ -240,7 +245,7 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin>
     ///如果传入的用户名在数据库中没有，保持唯一，可以更改，直接放行，如果一致，返回用户已存在异常
     //但此时有个问题：本身的用户名也会被锁定，如果用户不对用户名作更改，传入的用户名和数据库中的用户名会一致，然后抛出异常，这是不可以的
     //解决思路：用当前用户的id，去跟根据用户名查询到的id进行比较，如果不作更改，比较的值默认true，如果用了别人的用户名肯定是false
-    if (admin == null) {
+    if (ObjectUtils.isEmpty(admin)) {
       return;
     }
     if (!Objects.equals(adminId, admin.getId())) {
