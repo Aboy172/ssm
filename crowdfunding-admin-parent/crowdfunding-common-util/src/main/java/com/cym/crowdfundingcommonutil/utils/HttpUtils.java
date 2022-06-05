@@ -1,4 +1,4 @@
-package com.cym.crowd.util;
+package com.cym.crowdfundingcommonutil.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
